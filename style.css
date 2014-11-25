@@ -1,0 +1,251 @@
+/*
+	Theme Name: Open Wordstrap
+	Theme URI: https://github.com/steveathon/Open-Wordstrap
+	Description: Basic Bootstrap wordpress theme.
+	Author: Steve King
+	Author URI: https://github.com/steveathon/Open-Wordstrap
+	Version: 0.1
+	Tags: Bootstrap
+*/
+
+
+body {
+ font-family: 'Open Sans', sans-serif;
+  color: #555;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  margin-top: 0;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: normal;
+  color: #333;
+}
+
+
+/*
+ * Override Bootstrap's default container.
+ */
+
+@media (min-width: 1200px) {
+  .container {
+    width: 970px;
+  }
+}
+
+.WSBlogTitleHead {
+  background-color: #428bca;
+  -webkit-box-shadow: inset 0 -2px 5px rgba(0,0,0,.1);
+          box-shadow: inset 0 -2px 5px rgba(0,0,0,.1);
+}
+
+
+.WSBlogNav ul, .WSBlogMenu ul {
+	display: inline;
+	padding: 0; margin: 0;
+	list-style: none;
+}
+
+.WSBlogNav ul li, .WSBlogMenu ul li { 
+  display: inline-block;
+  padding: 10px;
+  font-weight: 500;
+  color: #cdddeb;
+  
+	list-style: none;
+}
+
+.WSBlogNav ul li a, .WSBlogMenu ul li a{
+  color: #cdddeb;
+}
+
+.WSBlogNav ul li a:hover,
+.WSBlogNav ul li a:focus {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Active state gets a caret at the bottom */
+.WSBlogNav ul li.current_page_item a {
+  color: #fff;
+}
+
+.WSBlogNav ul li {
+	position: relative;
+}
+
+.WSBlogNav ul li.current_page_item:after {
+	color: #fff;
+	content: " ";
+	position: absolute;
+	bottom: 0px;
+	left: 50%;
+	width: 0;
+	height: 0;
+	vertical-align: middle;
+	border-right: 5px solid transparent;
+	border-bottom: 5px solid;
+	border-left: 5px solid transparent;
+}
+
+
+/*
+ * Blog name, title and
+ * description.
+ */
+
+.WSMainHeader {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.WSMainTitle {
+  margin-top: 30px;
+  margin-bottom: 0;
+  font-size: 60px;
+  font-weight: normal;
+}
+.WSMainDescription {
+  font-size: 20px;
+  color: #999;
+}
+
+
+/*
+ * Main column and sidebar layout
+ */
+
+.wsBlogMain {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+/* Sidebar modules for boxing content */
+.wsSidebar {
+  padding: 15px;
+  margin: 0 -15px 15px;
+}
+.wsSidebarInset {
+  padding: 15px;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+}
+.wsSidebarInset p:last-child,
+.wsSidebarInset ul:last-child,
+.wsSidebarInset ol:last-child {
+  margin-bottom: 0;
+}
+
+
+/*
+ * Pagination
+ */
+ 
+.wsPaginate {
+	margin-bottom: 60px;
+	text-align: left;
+}
+.wsPaginate > li > a {
+	width: 140px;
+	padding: 10px 20px;
+	text-align: center;
+	border-radius: 30px;
+}
+
+
+/*
+ * Individual Posts
+ */
+
+.WSPost {
+  margin-bottom: 60px;
+}
+.WSPosTitle {
+  margin-bottom: 5px;
+  font-size: 40px;
+}
+.WSPostMeta {
+  margin-bottom: 20px;
+  color: #999;
+}
+
+
+/*
+ * Footer
+ */
+
+.wsContentFooter {
+	clear:both;
+  margin: 20px 0;
+  padding: 20px 0;
+  color: #999;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-top: 1px solid #e5e5e5;
+}
+
+.wsContentFooter p:last-child {
+  margin-bottom: 0;
+}
+
+.wsContentFooter .wsFooterMenu {
+	
+}
+
+.wsContentFooter .wsFooterMenu ul
+{
+  padding-left: 0px;
+  list-style-type: none;
+  list-style-image: none;
+  list-style-position: outside;
+	display: inline-block;
+}
+
+
+.wsContentFooter .wsFooterMenu ul li
+{
+  padding-left: 0px;
+  list-style-type: none;
+  list-style-image: none;
+  list-style-position: outside;
+  display: inline-block;
+  margin-left: 10px;
+}
+
+
+.wsContentFooter .wsFooterMenu h4 {
+	display: none;
+}
+
+.wsContentFooter .textwidget {
+	display: inline-block;
+	margin: 10px 0;
+}
+
+.wsWidgetCategories {
+	margin-bottom: 10px;
+}
+
+.wsMiniPost {
+	display: block;
+	pading: 10px;
+	margin: 10px 0 30px 0px;
+	border-bottom: 1px solid rgb(76,76,76);
+}
+
+/* 
+ *	Add support for list unstyled sublists, this is 
+ *	probably meant to be fixed elsewhere.
+ */
+ 
+.list-unstyled ul, 
+.list-unstyled ol
+{
+  padding-left: 0px;
+  list-style-type: none;
+  list-style-image: none;
+  list-style-position: outside;
+}
