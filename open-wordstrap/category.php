@@ -2,9 +2,6 @@
 
       <div class="row">
         <div class="col-sm-8 blog-main">
-        
-        <?php the_post(); ?>          
-
                 <div class="jumbotron"><div class="container">
 					<h2><?php single_cat_title() ?></h2>
 				
