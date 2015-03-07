@@ -7,33 +7,32 @@
 	 * 
 	 * This is a terrible implementation of the search.php and can be improved greatly.
 	 * 
+	 * Also, page numbering needs to be fixed.
+	 * 
 	 * However, it works. So, you know, here it is.
 	 * 
 	 */
 
 	get_header();
 	
-	
 	?>
-	
-	  <div class="row">
-        <div class="col-sm-8 blog-main">
-                <div class="jumbotron"><div class="container">
-					<h2>
-					<?php get_search_form(); ?></h2>
-				
+	<div class="row">
+		<div class="col-sm-8 blog-main">
+		<!-- Begin header -->
+			<div class="jumbotron"><div class="container">
+				<h2><?php get_search_form(); ?></h2>
 				<?php $categorydesc = category_description(); if ( !empty($categorydesc) ) echo apply_filters( 'archive_meta', '<p>' . $categorydesc . '</p>' ); ?>
-				
-					</div>
-				</div>
-				<?php rewind_posts(); ?>
-
-				<?php global $wp_query; $total_pages = $wp_query->max_num_pages; if ( $total_pages > 1 ) { ?>
-				                <div id="nav-above" class="navigation">
-				                    <div class="nav-previous"><?php next_posts_link() ?></div>
-				                    <div class="nav-next"><?php previous_posts_link() ?></div>
-				                </div><!-- #nav-above -->
-				<?php } ?>            
+			</div>
+		</div>
+		<!-- End Header -->
+		
+		<?php rewind_posts(); ?>
+			<?php global $wp_query; $total_pages = $wp_query->max_num_pages; if ( $total_pages > 1 ) { ?>
+			<div id="nav-above" class="navigation">
+				<div class="nav-previous"><?php next_posts_link() ?></div>
+				<div class="nav-next"><?php previous_posts_link() ?></div>
+			</div><!-- #nav-above -->
+		<?php } ?>            
 				
 	<?php
 	while ( have_posts() ) : the_post(); ?>
